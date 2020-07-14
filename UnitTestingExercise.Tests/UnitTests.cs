@@ -21,17 +21,22 @@ namespace UnitTestingExercise.Tests
         }
 
 
-        //[Theory]
-        //[InlineData()]
-        //public void Subtract(int minuend, int subtrhend, int expected)
-        //{
-        //    //Arrange
+        [Theory]
+        [InlineData(2, 1, 1)]
+        [InlineData(0, -1, 1)]
+        [InlineData(-10, -10, 0)]
+        [InlineData(200, 100, 100)]
+        public void Subtract(int minuend, int subtrhend, int expected)
+        {
+            //Arrange
+            UnitTestMethods sut = new UnitTestMethods();
+            //Act
+            var actual = sut.Subtract(minuend, subtrhend);
 
-        //    //Act
+            //Assert
+            Assert.Equal(expected, actual);
 
-        //    //Assert
-
-        //}
+        }
 
         //[Theory]
         //[InlineData()]
