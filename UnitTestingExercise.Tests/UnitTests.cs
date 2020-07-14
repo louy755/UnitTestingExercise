@@ -38,17 +38,22 @@ namespace UnitTestingExercise.Tests
 
         }
 
-        //[Theory]
-        //[InlineData()]
-        //public void Multiply(int num1, int num2, int expected)
-        //{
-        //    //Arrange
+        [Theory]
+        [InlineData(1, 1, 1)]
+        [InlineData(-1, 0, 0)]
+        [InlineData(-20, -10, 200)]
+        [InlineData(100, 100, 10000)]
+        public void Multiply(int num1, int num2, int expected)
+        {
+            //Arrange
+            UnitTestMethods sut = new UnitTestMethods();
+            //Act
+            var actual = sut.Multiply(num1, num2);
 
-        //    //Act
+            //Assert
+            Assert.Equal(expected, actual);
 
-        //    //Assert
-
-        //}
+        }
 
         //[Theory]
         //[InlineData()]
