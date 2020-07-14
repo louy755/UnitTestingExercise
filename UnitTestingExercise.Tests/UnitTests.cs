@@ -55,17 +55,22 @@ namespace UnitTestingExercise.Tests
 
         }
 
-        //[Theory]
-        //[InlineData()]
-        //public void Divide(int num1, int num2, int expected)
-        //{
-        //    //Arrange
+        [Theory]
+        [InlineData(2, 1, 2)]
+        [InlineData(-20, -2, 10)]
+        [InlineData(20, 0, -1)]
+        [InlineData(200, 20, 10)]
+        public void Divide(int num1, int num2, int expected)
+        {
+            //Arrange
+            UnitTestMethods sut = new UnitTestMethods();
+            //Act
+            var actual = sut.Divide(num1, num2);
 
-        //    //Act
+            //Assert
+            Assert.Equal(expected, actual);
 
-        //    //Assert
-
-        //}
+        }
 
         //[Fact]
         //public void YourMethodName()

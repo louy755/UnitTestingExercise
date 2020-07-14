@@ -35,11 +35,24 @@ namespace UnitTestingExercise
         }
 
         // Create a Divide method that passes 2 integers
+        public int Divide(int num, int num2)
+        {
+            try
+            {
+                var result = num / num2;
+                return result;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Division of {0} by zero.", num);
+                return -1;
+            }
 
+        }
 
 
         // Create 2 methods that will utilize the [Fact] tests you wrote
 
-        
+
     }
 }
